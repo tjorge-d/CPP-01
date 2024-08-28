@@ -8,9 +8,6 @@
 class Replacer
 {
 	private:
-		std::string		_s1;
-		std::string		_s2;
-		std::string 	_newFileContent;
 		std::fstream	_newFile;
 		std::fstream	_oldFile;
 
@@ -18,6 +15,8 @@ class Replacer
 		Replacer();
 		~Replacer();
 		bool	setNewFile(std::string NewFile);
+		bool	replace(std::string s1, std::string s2);
+		void	filesCloser();
 };
 
 #endif
