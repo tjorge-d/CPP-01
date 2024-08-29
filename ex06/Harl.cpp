@@ -6,10 +6,6 @@ Harl::Harl()
 	_levelFinder[1] = "INFO";
 	_levelFinder[2] = "WARNING";
 	_levelFinder[3] = "ERROR";
-	_level[0] = &Harl::_debug;
-	_level[1] = &Harl::_info;
-	_level[2] = &Harl::_warning;
-	_level[3] = &Harl::_error;
 	std::cout << "Constructor called\n";
 }
 
@@ -18,17 +14,43 @@ Harl::~Harl()
 	std::cout << "Destructor called\n";
 }
 
-void	Harl::complain(std::string level)
+void	Harl::harlFilter(std::string level)
 {
-	for (int i = 0; i <= 3; i++)
+	int	i = 0;
+	while (i <= 3)
 	{
 		if (!_levelFinder[i].compare(level))
-		{
-			(this->*_level[i])();
-			return;
-		}
+			break ;
+		i++;
 	}
-	std::cout << "[ Probably complaining about insignificant problems ]\n\n";
+	switch (i)
+	{
+		case 0:{
+			_debug();
+			_info();
+			_warning();
+			_error();
+			break;
+		}
+		case 1:{
+			_info();
+			_warning();
+			_error();
+			break;
+		}
+		case 2:{
+			_warning();
+			_error();
+			break;
+		}
+		case 3:{
+			_error();
+			break;
+		}
+		default:
+			std::cout << "[ Probably complaining about insignificant problems ]\n";
+			break;
+	}
 }
 
 void	Harl::_debug()

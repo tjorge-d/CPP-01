@@ -18,4 +18,5 @@ int	main()
 	std::cout << "Inacio got deleted because otherwise we would have leaks.\n";
 
 	std::cout << "\nArlindo's destructor is going to be called in the end of the program\nbecause it was created in the stack.\n";
+	return (1);
 }

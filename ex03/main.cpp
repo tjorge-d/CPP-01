@@ -44,17 +44,9 @@ void test2()
 
 int main()
 {
-	int n = 2;
-	int	*i = &n;
-
-	(*i) = 3;
-	n += 6;
-
-	std::cout << *i <<"\n";
-	std::cout << n <<"\n";
-
 	test1();
 	std::cout << "\n";
 	test2();
 	std::cout << "\n";
+	return (1);
 }

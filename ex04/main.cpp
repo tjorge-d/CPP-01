@@ -41,4 +41,5 @@ int main(int argc, char* argv[])
 		return(2);
 	replacer->replace(argv[2], argv[3]);
 	delete replacer;
+	return (1);
 }
