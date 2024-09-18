@@ -2,7 +2,7 @@
 
 HumanA::HumanA(std::string name, Weapon &weapon) : _name(name), _Weapon(weapon)
 {
-	std::cout << "HumanA constructor called ("<< _name << ", " << _Weapon.$getType() << ").\n";
+	std::cout << "HumanA constructor called ("<< _name << ", " << _Weapon.getType() << ").\n";
 }
 
 HumanA::~HumanA()
@@ -17,5 +17,5 @@ void	HumanA::setWeapon(Weapon &weapon)
 
 void	HumanA::attack()
 {
-	std::cout << _name << " attacks with their " <<  _Weapon.$getType() << std::endl;
+	std::cout << _name << " attacks with their " <<  _Weapon.getType() << std::endl;
 }

@@ -11,7 +11,7 @@ Weapon::~Weapon()
 	std::cout << "Weapon default destructor called.\n";
 }
 
-std::string Weapon::$getType() const
+const std::string& Weapon::getType()
 {
     return (_type);
 }

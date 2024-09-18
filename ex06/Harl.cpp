@@ -27,21 +27,12 @@ void	Harl::harlFilter(std::string level)
 	{
 		case 0:{
 			_debug();
-			_info();
-			_warning();
-			_error();
-			break;
 		}
 		case 1:{
 			_info();
-			_warning();
-			_error();
-			break;
 		}
 		case 2:{
 			_warning();
-			_error();
-			break;
 		}
 		case 3:{
 			_error();

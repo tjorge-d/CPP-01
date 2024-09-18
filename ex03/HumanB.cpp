@@ -20,5 +20,5 @@ void	HumanB::attack()
 	if (!_Weapon)
 		std::cout << _name << " has no Weapon.\n";
 	else
-		std::cout << _name << " attacks with their " <<  _Weapon->$getType() << std::endl;
+		std::cout << _name << " attacks with their " <<  _Weapon->getType() << std::endl;
 }
